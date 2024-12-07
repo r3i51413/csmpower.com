@@ -1,0 +1,35 @@
+/* Reset default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Full-height body to center content */
+body {
+    display: flex; /* Enables Flexbox */
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    height: 100vh; /* Full height of the viewport */
+    background-color: #f0f0f0; /* Light background */
+    overflow: hidden; /* Prevents scrollbars */
+}
+
+/* Perspective container for 3D effect */
+.image-container {
+    perspective: 1000px; /* Enable 3D perspective */
+    display: flex; /* Centers the image within the container */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling the image */
+.floating-image {
+    max-width: 60vw; /* Responsive width */
+    max-height: 60vh; /* Responsive height */
+    border: 5px solid black; /* Bold black frame */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: transform 0.1s ease-out; /* Smooth transitions */
+    transform-style: preserve-3d; /* Enables 3D transformations */
+    cursor: pointer; /* Indicates interactivity */
+}
