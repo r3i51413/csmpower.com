@@ -1,64 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Floating Image</title>
-    <style>
-        /* Reset default margins and paddings */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+/* Reset default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        /* Full-height body to center content */
-        body {
-            display: flex; /* Enables Flexbox */
-            justify-content: center; /* Centers horizontally */
-            align-items: center; /* Centers vertically */
-            height: 100vh; /* Full height of the viewport */
-            background-color: #f0f0f0; /* Light background */
-            overflow: hidden; /* Prevents scrollbars */
-        }
+/* Full-height body to center content */
+body {
+    display: flex; /* Enables Flexbox */
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    height: 100vh; /* Full height of the viewport */
+    background-color: #f0f0f0; /* Light background */
+    overflow: hidden; /* Prevents scrollbars */
+}
 
-        /* Perspective container for 3D effect */
-        .image-container {
-            perspective: 1000px; /* Enable 3D perspective */
-            display: flex; /* Centers the image within the container */
-            justify-content: center;
-            align-items: center;
-        }
+/* Perspective container for 3D effect */
+.image-container {
+    perspective: 1000px; /* Enable 3D perspective */
+    display: flex; /* Centers the image within the container */
+    justify-content: center;
+    align-items: center;
+}
 
-        /* Styling the image */
-        .floating-image {
-            width: auto; /* Automatically adjust width */
-            max-width: 40vw; /* Maximum 40% of the viewport width */
-            max-height: 40vh; /* Maximum 40% of the viewport height */
-            height: auto; /* Maintain aspect ratio */
-            border: 5px solid black; /* Bold black frame */
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-            transition: transform 0.1s ease-out; /* Smooth transitions */
-            transform-style: preserve-3d; /* Enables 3D transformations */
-            cursor: pointer; /* Indicates interactivity */
-        }
-
-        /* Responsive adjustments for smaller screens */
-        @media (max-width: 768px) {
-            .floating-image {
-                max-width: 80vw; /* Larger on small screens */
-                max-height: 80vh;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="image-container">
-        <img src="P.jpg" alt="Floating Image" class="floating-image">
-        <audio id="click-sound" src="KB.mp3"></audio>
-    </div>
-    <script>
-        // You can add interactivity for the floating effect here if needed
-    </script>
-</body>
-</html>
+/* Styling the image */
+.floating-image {
+    max-width: 60vw; /* Responsive width */
+    max-height: 60vh; /* Responsive height */
+    border: 5px solid black; /* Bold black frame */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: transform 0.1s ease-out; /* Smooth transitions */
+    transform-style: preserve-3d; /* Enables 3D transformations */
+    cursor: pointer; /* Indicates interactivity */
+}
