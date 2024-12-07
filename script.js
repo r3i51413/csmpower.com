@@ -12,8 +12,8 @@ document.addEventListener("mousemove", (e) => {
     const offsetY = (e.clientY - imageY) / 50; // Dampening factor
 
     // Clamp the rotation angles to ±40 degrees
-    const rotateY = Math.max(-20, Math.min(20, offsetX));
-    const rotateX = Math.max(-20, Math.min(20, offsetY));
+    const rotateY = Math.max(-60, Math.min(60, offsetX));
+    const rotateX = Math.max(-60, Math.min(60, offsetY));
 
     // Apply rotation
     image.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
